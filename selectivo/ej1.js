@@ -5,12 +5,13 @@ const leer = require("prompt-sync")();
 let numEvaluar = 0;
 
 console.log("Ingresa un numero a evaluar");
-numEvaluar = leer();
+numEvaluar = Number(leer());
+/* console.log( typeof numEvaluar); */
 
 if ( numEvaluar > 0) {
     console.log("Es positivo");
 }else if( numEvaluar == 0){
     console.log("Ingresaste cero! >:(");
-}else{
+}else if(numEvaluar < 0){
     console.log("Es negativo");
 }
